@@ -1,5 +1,7 @@
 package ru.potemkin.move4goodapp
 
+import android.content.Context
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
@@ -27,8 +29,23 @@ class MainActivity : AppCompatActivity() {
             activityListAdapter.submitList(activityList)
             activityListAdapter.notifyDataSetChanged()
         }
+        setupOnClick()
     }
 
+    private fun setupOnClick() {
+        with(binding) {
+            icLeaderboard.setOnClickListener {
+                val intent = LeaderboardActivity.newIntent(this@MainActivity)
+                startActivity(intent)
+                finish()
+            }
+            icProfile.setOnClickListener {
+                val intent = ProfileActivity.newIntent(this@MainActivity)
+                startActivity(intent)
+                finish()
+            }
+        }
+    }
 
 
     private fun setupRecyclerView() {
@@ -48,5 +65,12 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
+    companion object {
+
+        fun newIntent(context: Context): Intent {
+            val intent = Intent(context, MainActivity::class.java)
+            return intent
+        }
+    }
 
 }
