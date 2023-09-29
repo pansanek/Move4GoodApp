@@ -1,13 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout xmlns:tools="http://schemas.android.com/tools"
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:android="http://schemas.android.com/apk/res/android">
+    xmlns:tools="http://schemas.android.com/tools">
 
     <data>
+
         <variable
             name="activityItem"
             type="ru.potemkin.move4goodapp.domain.ActivityItem" />
     </data>
+
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -28,16 +30,16 @@
 
             <TextView
                 android:id="@+id/name"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
                 android:layout_weight="1"
+                android:gravity="center"
                 android:text="@{activityItem.name}"
                 android:textColor="@color/orange"
                 android:textSize="48sp"
                 android:textStyle="bold"
-                tools:text="Бег"
-                android:layout_width="match_parent"
-                android:layout_marginBottom="16dp"
-                android:gravity="center"/>
+                tools:text="Бег" />
 
 
             <RelativeLayout
@@ -54,17 +56,18 @@
                         android:id="@+id/total"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:text="@{String.valueOf(activityItem.count)}"
                         android:textColor="@color/orange"
-                        android:text="@{activityItem.count}"
                         android:textSize="64sp"
                         android:textStyle="bold"
                         tools:text="6969" />
+
                     <TextView
                         android:id="@+id/goal"
-                        android:layout_gravity="center"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="@{activityItem.goal}"
+                        android:layout_gravity="center"
+                        android:text="@{String.valueOf(activityItem.goal)}"
                         android:textSize="32sp"
                         android:textStyle="italic"
                         tools:text="10000" />
@@ -78,7 +81,6 @@
                     app:cpb_background_progressbar_color="@color/black"
                     app:cpb_background_progressbar_width="20dp"
                     app:cpb_progress_direction="to_right"
-                    app:cpb_progress_max="@{activityItem.goal}"
                     app:cpb_progressbar_color="@color/orange"
                     app:cpb_progressbar_width="15dp"
                     app:cpb_round_border="true" />
