@@ -7,7 +7,7 @@
 
         <variable
             name="activityItem"
-            type="ru.potemkin.move4goodapp.domain.ActivityItem" />
+            type="ru.potemkin.move4goodapp.domain.entities.ActivityItem" />
     </data>
 
     <androidx.cardview.widget.CardView

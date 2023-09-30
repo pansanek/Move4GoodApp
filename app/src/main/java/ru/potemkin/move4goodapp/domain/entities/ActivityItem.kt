@@ -1,4 +1,4 @@
-package ru.potemkin.move4goodapp.domain
+package ru.potemkin.move4goodapp.domain.entities
 
 data class ActivityItem(
     val name:String,

@@ -1,7 +1,7 @@
 package ru.potemkin.move4goodapp.presentation
 
 import androidx.recyclerview.widget.DiffUtil
-import ru.potemkin.move4goodapp.domain.ActivityItem
+import ru.potemkin.move4goodapp.domain.entities.ActivityItem
 
 class ActivityListDiffCallback (
     private val oldList:List<ActivityItem>,

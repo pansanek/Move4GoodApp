@@ -1,9 +1,8 @@
 package ru.potemkin.move4goodapp.data
 
-import android.util.Log
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
-import ru.potemkin.move4goodapp.domain.ActivityItem
+import ru.potemkin.move4goodapp.domain.entities.ActivityItem
 import ru.potemkin.move4goodapp.domain.ActivityRepository
 
 object ActivityRepositoryImpl: ActivityRepository {

@@ -1,6 +1,7 @@
 package ru.potemkin.move4goodapp.domain
 
 import androidx.lifecycle.LiveData
+import ru.potemkin.move4goodapp.domain.entities.ActivityItem
 
 interface ActivityRepository {
      fun addActivityItem(activityItem: ActivityItem)

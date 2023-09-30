@@ -1,6 +1,5 @@
 package ru.potemkin.move4goodapp.presentation
 
-import android.graphics.Color
 import android.util.Log
 import android.view.LayoutInflater
 import android.view.ViewGroup
@@ -9,7 +8,7 @@ import androidx.databinding.ViewDataBinding
 import androidx.recyclerview.widget.ListAdapter
 import com.mikhaellopez.circularprogressbar.CircularProgressBar
 import ru.potemkin.move4goodapp.R
-import ru.potemkin.move4goodapp.domain.ActivityItem
+import ru.potemkin.move4goodapp.domain.entities.ActivityItem
 import ru.potemkin.move4goodapp.databinding.ActivityItemBinding
 
 class ActivityListAdapter : ListAdapter<ActivityItem, ActivityItemViewHolder>(
